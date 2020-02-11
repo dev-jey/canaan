@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+    <link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" href="./desktop.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Canaan</title>
 </head>
 
@@ -13,6 +16,7 @@
     <div class="wrapper">
         <header>
             <div class="logo"><img src="./assets/SVG/Logo.svg" width="120" alt=""></div>
+            <div class="menu-toggler"><i class="fa fa-bars fa-2x"></i></div>
             <div class="search">
                 <input type="search" placeholder="Search">
             </div>
@@ -32,9 +36,11 @@
             </div>
         </div>
         <div class="about">
-            <div class="companies"></div>
+            <div class="companies">
+                <img src="./assets/SVG/companies2.svg" alt="">
+            </div>
             <div class="about-content">
-                <h5 class="about-title">About<span class="line"></span></h5>
+                <h5 class="about-title">About<span class="line2"></span></h5>
                 <h2>CONTRIBUTING TO THE DEVELOPMENT OF AFRICA.</h2>
                 <p>The company is a branch of Canaan Group which comprises of different companies that
                     function in different countries around the world. It has strategically positioned
@@ -60,46 +66,48 @@
                             and multifaceted production
                             caters for a wide range of customer products.
                             <br><br>
-                            <button class="btn-success">Find out more</button>
+                            <button class="btn btn-success">Find out more</button>
                         </p>
                     </div>
                 </div>
                 <br>
-                <p>Stories<span class="line"></span></p>
+                <p class="stories">Stories<span class="line"></span></p>
             </div>
-            <div>
+            <div class="card">
                 <div>Feb 28 2020<br>Press Release</div>
                 <div class="card1">
-                    Helping the community
-                    <br><br><br><br><br><br>
+                    <H5>Helping the community</H5>
                     CSR
                 </div>
             </div>
-            <div>
+            <div class="card">
                 <div>Aug 8 2020<br>Article</div>
                 <div class="card2">
                 </div>
             </div>
-            <div>
+            <div class="card">
+                    <div> <br> <br></div>
                 <div class="card3">
                     <h2>Read more Updates on our products</h2>
-                    <div class="icon">Icon</div>
+                    <div class="icon"><i class="fa fa-arrow-right"></i></div>
                 </div>
             </div>
         </div>
         <div class="workwithus">
-            <!-- <h3>Work With us <span class="line"></span></h3> -->
-            <div class="passionate">Passionate about working with us?</div>
+            <h5 class="title">Work With us <span class="line"></span></h3>
+            <div class="passionate">PASSIONATE ABOUT WORKING WITH US?</div>
             <div class="more"> We are always on the look out for energetic professionals to join our team.</div>
             <div class="view-openings">
-                <button class="btn-white">View our openings</button>
+                <button class="btn btn-white">View our openings</button>
             </div>
         </div>
         <footer>
+             <h5 class="getintouch">Get In Touch <span class="line3"></span></h5>
             <div class="contact">
                 <h2>Contact</h2>
                 <p>Select the country you wish to contact</p>
                 <select>
+                    <option value="" disabled selected="selected">Select Country</option>
                     <option value="">Kenya</option>
                 </select>
             </div>
@@ -116,7 +124,9 @@
                 future.
                 <br>
                 <br>
-                Icons
+                <i class="fa fa-twitter social"></i>
+                <i class="fa fa-facebook-f social"></i>
+                <i class="fa fa-instagram social"></i><i class="fa fa-linkedin social"></i>
 
             </div>
         </footer>
