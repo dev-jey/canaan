@@ -62,7 +62,7 @@ input[type="search"] {
 }
 
 .fa-bars{
-  color: #fff;
+  color: rgb(233, 233, 233);
   font-weight: lighter;
   top: 0;
   position: sticky;
@@ -100,7 +100,6 @@ footer{
 }
 
 .mobile-menu{
-  background: red;
   position: fixed; /* Stay in place */
   z-index: 1000; /* Sit on top */
   left: 0;
@@ -114,6 +113,7 @@ footer{
 .menu-content{
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
+  margin-top: 200px;
   width: 80%
 }
 .menu-content a{
@@ -127,7 +127,7 @@ footer{
 .close {
   color: rgb(245, 0, 0);
   float: right;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   padding: 5%;
 }

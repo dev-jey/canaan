@@ -42,9 +42,11 @@
   }
   .search {
       grid-area: search;
+      justify-self: stretch;
   }
   .search input {
-    width: 100%;
+    width: 95%;
+    margin: auto;
   }
 
   /**
