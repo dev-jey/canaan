@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">        
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./mobile.css">
     <link rel="stylesheet" href="./desktop.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <title>Canaan</title>
 </head>
 
@@ -16,7 +17,7 @@
     <div class="wrapper">
         <header>
             <div class="logo"><img src="./assets/SVG/Logo.svg" width="120" alt=""></div>
-            <div class="menu-toggler"><i class="fa fa-bars fa-2x"></i></div>
+            <div class="menu-toggler" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
             <div class="search">
                 <input type="search" placeholder="Search">
             </div>
@@ -28,11 +29,33 @@
                 <a href="">Careers</a>
                 <a href="">Contact</a>
             </div>
+            <div class="mobile-menu" id="mobile-menu">
+                    <span class="close">&times;</span>
+                <div class="menu-content">
+                    <a href="">About</a><br>
+                    <a href="">Subsidiaries</a><br>
+                    <a href="">CSR</a><br>
+                    <a href="">News & Updates</a><br>
+                    <a href="">Careers</a><br>
+                    <a href="">Contact</a><br>
+                </div>
+            </div>
         </header>
-        <div class="main-content">
-            <div class="welcome-text">BREAKING BOUNDARIES</div>
-            <div class="welcome-img">
-                <img src="./assets/SVG/Playvideo.svg" alt="" width="150">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide main-content">
+                    <div class="welcome-text">BREAKING BOUNDARIES</div>
+                    <div class="welcome-img">
+                        <img src="./assets/SVG/Playvideo.svg" alt="" width="150">
+                    </div>
+                </div>
+                <div class="swiper-slide main-content2">
+                    <div class="welcome-text">BREAKING BOUNDARIES</div>
+                    <div class="welcome-img">
+                        <img src="./assets/SVG/Playvideo.svg" alt="" width="150">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="about">
@@ -86,7 +109,7 @@
                 </div>
             </div>
             <div class="card">
-                    <div> <br> <br></div>
+                <div> <br> <br></div>
                 <div class="card3">
                     <h2>Read more Updates on our products</h2>
                     <div class="icon"><i class="fa fa-arrow-right"></i></div>
@@ -95,14 +118,14 @@
         </div>
         <div class="workwithus">
             <h5 class="title">Work With us <span class="line"></span></h3>
-            <div class="passionate">PASSIONATE ABOUT WORKING WITH US?</div>
-            <div class="more"> We are always on the look out for energetic professionals to join our team.</div>
-            <div class="view-openings">
-                <button class="btn btn-white">View our openings</button>
-            </div>
+                <div class="passionate">PASSIONATE ABOUT WORKING WITH US?</div>
+                <div class="more"> We are always on the look out for energetic professionals to join our team.</div>
+                <div class="view-openings">
+                    <button class="btn btn-white">View our openings</button>
+                </div>
         </div>
         <footer>
-             <h5 class="getintouch">Get In Touch <span class="line3"></span></h5>
+            <h5 class="getintouch">Get In Touch <span class="line3"></span></h5>
             <div class="contact">
                 <h2>Contact</h2>
                 <p>Select the country you wish to contact</p>
@@ -120,18 +143,48 @@
                 +254708072275<br>
                 +254716899365
             </div>
-            <div class="social">We are always looking to connect with those who share an interest in building a better
+            <div>We are always looking to connect with those who share an interest in building a better
                 future.
                 <br>
                 <br>
-                <i class="fa fa-twitter social"></i>
-                <i class="fa fa-facebook-f social"></i>
-                <i class="fa fa-instagram social"></i><i class="fa fa-linkedin social"></i>
+                <div class="social">
+
+                    <i class="fa fa-twitter social"></i>
+                    <i class="fa fa-facebook-f social"></i>
+                    <i class="fa fa-instagram social"></i><i class="fa fa-linkedin social"></i>
+                </div>
 
             </div>
         </footer>
     </div>
     <div class="copyright">Copyright @2020 Canaan Group</div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            effect: 'fade',
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            }
+        });
+        const menu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            menu.style.display = "block"
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            menu.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == menu) {
+                menu.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

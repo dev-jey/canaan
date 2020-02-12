@@ -1,8 +1,8 @@
 @media all and (min-width: 768px) {
-    /**
+  /**
 Main wrapper
 */
-.wrapper {
+  .wrapper {
     display: grid;
     background: rgb(147, 213, 0);
     grid-template-columns: 1.5em 1fr 1.5em;
@@ -12,12 +12,15 @@ Main wrapper
       "about about about"
       "innovation innovation innovation"
       "workwithus workwithus workwithus"
-      "footer footer footer"
-      ;
+      "footer footer footer";
   }
   .menu-toggler {
     display: none;
   }
+
+  .mobile-menu{
+    display: none;
+}
   /**
   Header
   */
@@ -34,7 +37,7 @@ Main wrapper
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  
+
   /**
   Logo
   */
@@ -43,7 +46,7 @@ Main wrapper
     align-self: stretch;
     margin-top: 2%;
   }
-  
+
   /**
   Search
   */
@@ -53,7 +56,7 @@ Main wrapper
     align-self: center;
     justify-self: end;
   }
-  
+
   /**
   Main menu
   */
@@ -71,35 +74,46 @@ Main wrapper
     padding-top: 20px;
     font-size: 20px;
   }
-  
+
   /**
   Main Content
   */
-  .main-content {
+  .swiper-container {
     grid-area: main;
+  }
+  .swiper-slide {
     padding-right: 250px;
     padding-left: 250px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "welcome-text welcome-img";
-    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("./assets/images/welcome-img.png");
+    grid-template-areas: "welcome-text welcome-img";
+    background-repeat: no-repeat;
     background-size: 100%;
     color: #fff;
   }
-  .welcome-text{
+  .main-content {
+    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)),
+      url("./assets/images/welcome-img.png");
+  }
+  .main-content2 {
+    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)),
+      url("./assets/images/welcome-img-2.png");
+  }
+  .welcome-text {
     grid-area: welcome-text;
   }
-  .main-content div {
+  .main-content div,
+  .main-content2 div{
     font-size: 50px;
     padding-top: 40%;
     padding-bottom: 40%;
   }
-  .welcome-img{
+  .welcome-img {
     grid-area: welcome-img;
     margin-top: 10px;
+    align-self: start;
   }
-  
+
   /**
   About
   */
@@ -127,11 +141,11 @@ Main wrapper
     padding-top: 1%;
     padding-bottom: 2%;
   }
-  
+
   .about-title {
     color: rgb(134, 134, 134);
   }
-  
+
   /**
   Innovation
   */
@@ -151,125 +165,123 @@ Main wrapper
   .carosel {
     grid-area: carosel;
   }
-  .carousel-content{
-      margin-top: 5%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      height: 380px;
+  .carousel-content {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    height: 380px;
   }
-  .carousel-content .description{
-      margin-top: 5%;
+  .carousel-content .description {
+    margin-top: 5%;
+    padding-right: 5%;
   }
-  .carousel-img{
-       margin: auto;
+  .carousel-img {
+    margin: auto;
   }
-  .carousel-img img{
-      border-radius: 10px;
+  .carousel-img img {
+    border-radius: 10px;
   }
-  .card1{
-      background: linear-gradient(rgba(47, 47, 47, 0.8), rgba(37, 37, 37, 0.8)), url("./assets/images/card2.png");
-      color: #fff;
-      padding: 10%;
-      margin-top: 2%;
-      padding-top: 70%;
-      height: 400px
+  .card1 {
+    background: linear-gradient(rgba(47, 47, 47, 0.8), rgba(37, 37, 37, 0.8)), url("./assets/images/card2.png");
+    color: #fff;
+    padding: 10%;
+    margin-top: 2%;
+    padding-top: 70%;
+    height: 400px;
   }
-  .card2{
-      background: url("./assets/images/card2.png");
-      margin-top: 2%;
-      height: 400px
+  .card2 {
+    background: url("./assets/images/card2.png");
+    margin-top: 2%;
+    height: 400px;
   }
-  .card3{
-      background: rgb(187, 187, 187); 
-      color: #fff;
-      padding: 10%;
-      margin-top: 2%;
-      padding-top: 50%;
-      height: 400px
+  .card3 {
+    background: rgb(187, 187, 187);
+    color: #fff;
+    padding: 10%;
+    margin-top: 2%;
+    padding-top: 50%;
+    height: 400px;
   }
-  .card3 .icon{
-     text-align: right;
+  .card3 .icon {
+    text-align: right;
   }
-  
-  
+
   /**
   Work with us
   */
-  .workwithus{
-      grid-area: workwithus;
-      background: rgb(23, 26, 56);
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
+  .workwithus {
+    grid-area: workwithus;
+    background: rgb(23, 26, 56);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
       "title title title"
-        "passionate more view-openings";
-      padding-right: 250px;
-      padding-left: 250px;
-      padding-top: 10px;
-      padding-bottom: 70px;
-      color: #fff;
+      "passionate more view-openings";
+    padding-right: 250px;
+    padding-left: 250px;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    color: #fff;
   }
-  .title{
+  .title {
     padding-bottom: 35px;
-      grid-area: title;
-      color: rgb(134, 134, 134);
+    grid-area: title;
+    color: rgb(134, 134, 134);
   }
-  .passionate{
-      grid-area: passionate;
-      text-align: left;
-      font-size: 30px;
-      color: rgb(123, 218, 28);
+  .passionate {
+    grid-area: passionate;
+    text-align: left;
+    font-size: 30px;
+    color: rgb(123, 218, 28);
   }
-  .more{
-      grid-area: more;
-      align-self: center;
+  .more {
+    grid-area: more;
+    align-self: center;
   }
-  .view-openings{
-      grid-area: view-openings;
-      align-self: center;
-      margin: auto;
+  .view-openings {
+    grid-area: view-openings;
+    align-self: center;
+    margin: auto;
   }
-  
-  
+
   /**
   Footer
   */
-  footer{
-      grid-area: footer;
-      display: grid;
-      padding-top: 2.5%;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
+  footer {
+    grid-area: footer;
+    display: grid;
+    padding-top: 2.5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
       "getintouch getintouch getintouch"
-        "contact location social";
-      padding-right: 250px;
-      padding-left: 250px;
-      padding-bottom: 5%;
-      background: rgb(230, 230, 230);
+      "contact location social";
+    padding-right: 250px;
+    padding-left: 250px;
+    padding-bottom: 5%;
+    background: rgb(230, 230, 230);
   }
-  .getintouch{
-      grid-area: getintouch;
+  .getintouch {
+    grid-area: getintouch;
   }
-  .contact{
-      grid-area: contact;
+  .contact {
+    grid-area: contact;
   }
-  .location{
-      grid-area: location;
-      margin: auto;
-      padding-top: 6%;
+  .location {
+    grid-area: location;
+    margin: auto;
+    padding-top: 6%;
   }
-  .social{
-      grid-area: social;
-      padding-top: 6%;
+  .social {
+    grid-area: social;
+    padding-top: 6%;
   }
-  .copyright{
-      text-align: center;
-      background: rgb(23, 26, 56);
-      width: 100%;
-      color: #fff;
-      height: 60px;
-      padding-top: 1%
+  .copyright {
+    text-align: center;
+    background: rgb(23, 26, 56);
+    width: 100%;
+    color: #fff;
+    height: 60px;
+    padding-top: 1%;
   }
 }
-
