@@ -27,8 +27,8 @@
     text-align: right;
     grid-area: menu-toggler;
   }
-  .mobile-menu{
-      display: none;
+  .mobile-menu {
+    display: none;
   }
   .mymenu {
     display: none;
@@ -37,12 +37,12 @@
     margin: auto;
     padding-bottom: 2px;
   }
-  .logo img{
-      padding-bottom: 25px;
+  .logo img {
+    padding-bottom: 25px;
   }
   .search {
-      grid-area: search;
-      justify-self: stretch;
+    grid-area: search;
+    justify-self: stretch;
   }
   .search input {
     width: 95%;
@@ -52,10 +52,10 @@
   /**
   main-content
   */
-  .swiper-container{
-      grid-area: main;
+  .swiper-container {
+    grid-area: main;
   }
-  .swiper-slide{
+  .swiper-slide {
     padding: 0;
     display: grid;
     grid-template-columns: 1fr;
@@ -68,7 +68,8 @@
     background-repeat: no-repeat;
     color: #fff;
   }
-  .main-content div, .main-content2 div {
+  .main-content div,
+  .main-content2 div {
     padding-top: 50%;
     font-size: 30px;
     text-align: center;
@@ -86,13 +87,14 @@
     padding-bottom: 25%;
   }
   .main-content div,
-  .main-content2 div{
+  .main-content2 div {
     font-size: 50px;
     padding-top: 50px;
     padding-bottom: 20px;
   }
   .welcome-img img {
     width: 10%;
+    cursor: pointer;
   }
 
   /**
@@ -105,12 +107,15 @@
     text-align: left;
   }
   .companies {
-    margin-top: 100px;
-    padding: 5%;
-    padding: auto 25%;
+    margin: auto;
+    display: block;
   }
+  .companies img {
+    margin: 25% auto;
+    width: 100%;
+  }
+
   .about-content {
-    margin-top: 10%;
     padding-left: 15%;
     padding-right: 5%;
     color: #fff;
@@ -121,14 +126,6 @@
       "Helvetica Neue", sans-serif;
     padding-top: 1%;
     padding-bottom: 2%;
-  }
-  .line {
-    border: solid 0.3px rgb(238, 238, 238);
-    width: 20%;
-    color: rgb(134, 134, 134);
-    position: absolute;
-    margin-left: 2%;
-    margin-top: 1%;
   }
 
   .about-title {
@@ -142,6 +139,7 @@
     grid-area: innovation;
     background: #fff;
     display: grid;
+    padding: auto 5%;
     grid-template-areas:
       "carosel"
       "card1"
@@ -172,7 +170,10 @@
     border-radius: 10px;
   }
   .stories {
-    padding: 5%;
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: hidden;
   }
   .card {
     padding: 5%;
@@ -208,7 +209,7 @@
   Work with us
   */
   .workwithus {
-      grid-area: workwithus;
+    grid-area: workwithus;
     background-color: rgb(23, 26, 56);
     color: #fff;
     padding: 5%;
@@ -229,7 +230,7 @@
   /**
   Footer
   */
-  .footer{
+  .footer {
     grid-area: footer;
     background: rgb(230, 230, 230) !important;
   }
@@ -244,9 +245,10 @@
   .copyright {
     padding: 5%;
   }
-.getintouch{
-    padding: 5%;
-}
+  .getintouch {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   /**
 buttons
 */
@@ -254,4 +256,8 @@ buttons
     display: block;
     width: 100%;
   }
+}
+
+.line::after {
+  width: 100%;
 }

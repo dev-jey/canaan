@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap");
-* {
+*, *::after, *::before {
   box-sizing: border-box;
 }
-html {
+
+html, body {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Be Vietnam", sans-serif;
 }
 
@@ -16,15 +18,9 @@ Buttons
 */
 .btn-success {
   background: rgb(147, 213, 0);
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
 }
 .btn-white {
   background: #fff;
-  border-radius: 25px;
-  padding: 10px 20px;
-  cursor: pointer;
 }
 select {
   border: 0 none;
@@ -44,6 +40,10 @@ select:focus{
 .btn {
   outline: none;
   border: none;
+  border-radius: 25px;
+  padding: 14px 50px;
+  font-size: 14px;
+  cursor: pointer;
 
 }
 .btn:focus {
@@ -67,17 +67,20 @@ input[type="search"] {
   top: 0;
   position: sticky;
 }
-
-.line, .line2, .line3 {
-  border: solid 0.3px rgb(134, 134, 134);
-  width: 60%;
-  color: rgb(134, 134, 134);
-  position: absolute;
-  margin-left: 2%;
-  margin-top: 1%;
+.line{
+  width: 100%;
+  position: relative;
+  color: rgb(155, 155, 155);
+  overflow-x: hidden;
 }
-.line2{
-  width: 20%;
+.line::after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: .8px;
+  bottom: 0;
+  margin-left: 5px;
+  background-color: rgb(155, 155, 155);
 }
 footer{
   background: rgb(230, 230, 230);
