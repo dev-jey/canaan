@@ -2,9 +2,18 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
-
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
 html, body {
   scroll-behavior: smooth;
+}
+
+:root{
+--canaan-east-blue: rgb(18,20,60);
+--canaan-east-green: rgb(147, 213, 0);
 }
 
 body {
@@ -17,7 +26,7 @@ body {
 Buttons
 */
 .btn-success {
-  background: rgb(147, 213, 0);
+  background: var(--canaan-east-green)
 }
 .btn-white {
   background: #fff;
@@ -59,6 +68,12 @@ input[type="search"] {
   border: none;
   border-radius: 25px;
   padding: 0 10px;
+}
+input[type="search"]::after{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+  height: 200px;
+  width: 200px;
+  background: blue
 }
 
 .fa-bars{
@@ -137,7 +152,14 @@ footer{
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: var(--canaan-east-blue);
   text-decoration: none;
   cursor: pointer;
+}
+/**
+Anchor tags
+*/
+a[href]{
+  text-decoration: none;
+  color: inherit;
 }

@@ -4,7 +4,7 @@ Main wrapper
 */
   .wrapper {
     display: grid;
-    background: rgb(147, 213, 0);
+    background: var(--canaan-east-green);
     grid-template-columns: 1.5em 1fr 1.5em;
     grid-template-areas:
       "header header header"
@@ -13,6 +13,17 @@ Main wrapper
       "innovation innovation innovation"
       "workwithus workwithus workwithus"
       "footer footer footer";
+    color: var(--canaan-east-blue);
+  }
+  .subsidiaries-wrapper {
+    display: grid;
+    background: var(--canaan-east-green);
+    grid-template-columns: 2fr;
+    grid-template-areas:
+      "header                 header                "
+      "subsidiaries-container subsidiaries-container"
+      "footer                 footer                ";
+    color: var(--canaan-east-blue);
   }
   .menu-toggler {
     display: none;
@@ -68,13 +79,31 @@ Main wrapper
     text-align: center;
     font-weight: bold;
     top: 0;
+    gap: 1em;
     position: sticky;
   }
   .mymenu a {
     text-decoration: none;
     padding-bottom: 10px;
+    margin-bottom: -5px;
     padding-top: 18px;
-    font-size: 15px;
+    font-size: 16px;
+    color: rgb(23, 26, 56);
+    position: relative;
+  }
+  .mymenu a::after {
+    content: "";
+    position: absolute;
+    z-index: 1000000;
+    width: 100%;
+    height: 7px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    display: none;
+  }
+  .mymenu a:hover::after {
+    display: block;
   }
 
   /**
@@ -94,12 +123,10 @@ Main wrapper
     color: #fff;
   }
   .main-content {
-    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)),
-      url("./assets/images/welcome-img.png");
+    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img.png");
   }
   .main-content2 {
-    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)),
-      url("./assets/images/welcome-img-2.png");
+    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img-2.png");
   }
   .welcome-text {
     grid-area: welcome-text;
@@ -170,12 +197,14 @@ Main wrapper
     grid-gap: 2em;
     padding-right: 20px;
     padding-left: 20px;
+    margin-bottom: -5%;
   }
   .carosel {
     grid-area: carosel;
+    margin-top: 5%;
   }
   .carousel-content {
-    margin-top: 5%;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -193,7 +222,7 @@ Main wrapper
     border-radius: 10px;
   }
   .card1 {
-    background: linear-gradient(rgba(47, 47, 47, 0.8), rgba(37, 37, 37, 0.8)), url("./assets/images/card2.png");
+    background: linear-gradient(rgba(47, 47, 47, 0.8), rgba(37, 37, 37, 0.8)), url("../images/card2.png");
     color: #fff;
     padding: 10%;
     margin-top: 2%;
@@ -201,7 +230,7 @@ Main wrapper
     height: 400px;
   }
   .card2 {
-    background: url("./assets/images/card2.png");
+    background: url("../images/card2.png");
     margin-top: 2%;
     height: 400px;
   }
@@ -295,6 +324,70 @@ Main wrapper
   }
 }
 
+/**
+Subsidiaries Page
+*/
+
+.subsidiaries-container {
+  grid-area: subsidiaries-container;
+  background: #fff;
+  padding-top: 2.5%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr 2fr;
+  grid-template-areas:
+    "subsidiaries-header subsidiaries-header"
+    "subsidiaries-sub-menu subsidiaries-sliders";
+  gap: 2em;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.subsidiaries-header {
+  grid-area: subsidiaries-header;
+}
+.subsidiaries-sub-menu {
+  grid-area: subsidiaries-sub-menu;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  text-align: left;
+  gap: 1em;
+  padding: 2%;
+  font-size: 17px;
+}
+.subsidiaries-sliders {
+  grid-area: subsidiaries-sliders;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "subsidiaries-slider"
+    "subsidiaries-slider"
+    "subsidiaries-slider"
+    "subsidiaries-slider";
+  margin-bottom: 5%;
+}
+.subsidiaries-slider {
+  grid-area: subsidiaries-slider;
+  background-image: url("../images/tallbuilding.png");
+  height: 600px;
+  border-radius: 20px;
+}
+
+.subsidiaries-content {
+}
+.subsidiaries-content2 {
+  /* background-image: url("../images/welcome-img-2.png"); */
+  border-radius: 30px;
+}
+.subsidiaries-content div,
+.subsidiaries-content2 div {
+  font-size: 20px;
+  display: flex;
+  place-items: center;
+}
+
 @media all and (min-width: 1200px) {
   /**
   Header
@@ -340,6 +433,14 @@ Main wrapper
   Footer
   */
   footer {
+    padding-right: 250px;
+    padding-left: 250px;
+  }
+
+  /**
+Subsidiaries pages
+*/
+  .subsidiaries-container {
     padding-right: 250px;
     padding-left: 250px;
   }
