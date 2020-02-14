@@ -113,7 +113,7 @@ Main wrapper
   .swiper-container {
     grid-area: main;
   }
-  .swiper-slide {
+  .main-content, .main-content2 {
     padding-right: 20px;
     padding-left: 20px;
     display: grid;
@@ -374,20 +374,15 @@ Subsidiaries Page
   .subsidiaries-slider1 {
     grid-area: subsidiaries-slider1;
     height: 600px;
-    box-shadow: 0px 0px 10px rgb(230, 230, 230);
+    box-shadow: 0px 0px 10px  rgb(202, 202, 202);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 0.5fr 0.8fr;
     grid-template-areas:
-      "swiper-container swiper-container swiper-container"
+      "swiper swiper swiper"
       "desc desc desc"
       "logos logos logos";
     border-radius: 20px;
-  }
-  .swiper-container {
-    grid-area: swiper-container;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
   }
 
   .slide-images img {
@@ -427,12 +422,12 @@ Subsidiaries Page
   .subsidiaries-slider2 {
     grid-area: subsidiaries-slider2;
     height: 600px;
-    box-shadow: 0px 0px 10px rgb(230, 230, 230);
+    box-shadow: 0px 0px 10px rgb(202, 202, 202);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 0.5fr 0.8fr;
     grid-template-areas:
-      "swiper-container swiper-container swiper-container"
+      "swiper swiper swiper"
       "desc desc desc"
       "logos logos logos";
     border-radius: 20px;
@@ -440,12 +435,12 @@ Subsidiaries Page
   .subsidiaries-slider3 {
     grid-area: subsidiaries-slider3;
     height: 600px;
-    box-shadow: 0px 0px 10px rgb(230, 230, 230);
+    box-shadow: 0px 0px 10px rgb(202, 202, 202);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 0.5fr 0.8fr;
     grid-template-areas:
-      "swiper-container swiper-container swiper-container"
+      "swiper swiper swiper"
       "desc desc desc"
       "logos logos logos";
     border-radius: 20px;
@@ -453,15 +448,20 @@ Subsidiaries Page
   .subsidiaries-slider4 {
     grid-area: subsidiaries-slider4;
     height: 600px;
-    box-shadow: 0px 0px 10px rgb(230, 230, 230);
+    box-shadow: 0px 0px 10px rgb(202, 202, 202);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 0.5fr 0.8fr;
     grid-template-areas:
-      "swiper-container swiper-container swiper-container"
+      "swiper swiper swiper"
       "desc desc desc"
       "logos logos logos";
     border-radius: 20px;
+  }
+  .swiper{
+    grid-area: swiper;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
   }
 }
 
@@ -478,7 +478,7 @@ Subsidiaries Page
   /**
   Main Content
   */
-  .swiper-slide {
+  .main-content{
     padding-right: 250px;
     padding-left: 250px;
   }
