@@ -168,3 +168,6 @@ a[href]{
 .swiper-container-rtl .swiper-button-next{
     background-image: none;
 }
+.card p{
+  color: var(--canaan-east-green)
+}
