@@ -135,9 +135,13 @@ Main wrapper
   }
   .main-content {
     background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .main-content2 {
     background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .welcome-text {
     grid-area: welcome-text;
