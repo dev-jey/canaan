@@ -92,15 +92,16 @@
   }
   .main-content div,
   .main-content2 div {
-    font-size: 50px;
+    font-size: 40px;
     padding-left: 5%;
     padding-right: 5%;
     margin:auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 60px;
+    text-align: center;
+    /* padding-bottom: 20px; */
   }
   .welcome-img img {
-    width: 10%;
+    width: 50%;
     cursor: pointer;
   }
 
