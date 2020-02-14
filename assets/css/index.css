@@ -161,5 +161,10 @@ Anchor tags
 */
 a[href]{
   text-decoration: none;
-  color: inherit;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-button-prev, 
+.swiper-container-rtl .swiper-button-next{
+    background-image: none;
 }
