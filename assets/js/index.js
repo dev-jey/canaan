@@ -21,6 +21,6 @@ window.onclick = function (event) {
 let loader_holder = document.getElementsByClassName("loader-holder")[0];
 
 function hideLoader() {
-    document.getElementById("loader").style.display = "none";
+    document.getElementById("loader-holder").style.display = "none";
     loader_holder.style.display = "none";
 }

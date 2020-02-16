@@ -177,7 +177,7 @@ a[href]{
 .loader-holder{
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 100;
   left:0;
   right: 0;
@@ -185,37 +185,53 @@ a[href]{
   top:0;
   position: fixed;
 }
-#loader{
-  z-index: 1000;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: fixed;
-  left: 0;
-  right:0;
-  bottom: 0;
-  top:0;
+#loading-spinner {
+  /* display: inline; */
+  position: relative;
+  z-index: 999999;
+  height: 100vh !important;
+}
+
+#loading-spinner .spin-icon {
   margin: auto;
-  border: 7x solid rgb(39, 38, 38);
-  background: #fff;
-  animation: round 6s linear infinite;
+  width: 80px;
+  height: 80px;
+
+  border: solid 3px transparent;
+  border-top-color:  #666;
+  border-left-color: #666;
+  border-radius: 80px;
+
+  -webkit-animation: loading-spinner 500ms linear infinite;
+  -moz-animation:    loading-spinner 500ms linear infinite;
+  -ms-animation:     loading-spinner 500ms linear infinite;
+  -o-animation:      loading-spinner 500ms linear infinite;
+  animation:         loading-spinner 500ms linear infinite;
+  margin-top:270px;
 }
-#loader2{
-  z-index: 1000;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: fixed;
-  left: 0;
-  right:0;
-  bottom: 0;
-  top:0;
-  margin: auto;
-  border: 7x solid rgb(39, 38, 38);
-  background: var(--canaan-east-blue);
-  animation: round 6s linear infinite;
+
+@-webkit-keyframes loading-spinner {
+  0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
-@keyframes round{
-  from{transform:rotate(0deg)}
-  to{transform: rotate(180deg)}
+
+@-moz-keyframes loading-spinner {
+  0%   { -moz-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
 }
+
+@-o-keyframes loading-spinner {
+  0%   { -o-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes loading-spinner {
+  0%   { -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes loading-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+© 2020 GitHub, Inc.
