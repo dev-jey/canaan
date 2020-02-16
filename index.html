@@ -13,7 +13,13 @@
     <title>Canaan</title>
 </head>
 
-<body>
+<body onload="hideLoader()">
+    <div class="loader-holder">
+        <div id="loader">
+            <div id="loader2">
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
         <header>
             <div class="logo"><a href="index.html"><img src="./assets/SVG/Logo.svg" width="80" alt=""></a> </div>
@@ -22,7 +28,7 @@
                 <input type="search" placeholder="Search">
             </div>
             <div class="mymenu">
-                <a href="">About</a>
+                <a href="about.html">About</a>
                 <a href="subsidiaries.html">Subsidiaries</a>
                 <a href="">CSR</a>
                 <a href="">News & Updates</a>
@@ -32,7 +38,7 @@
             <div class="mobile-menu" id="mobile-menu">
                 <span class="close">&times;</span>
                 <div class="menu-content">
-                    <a href="">About<br>
+                    <a href="about.html">About<br>
                         <hr></a>
                     <a href="subsidiaries.html">Subsidiaries<br>
                         <hr></a>
@@ -102,17 +108,19 @@
                 <p class="stories line">Stories</p>
             </div>
             <div class="card">
-                <div>Feb 28 2020<p>Press Release</p></div>
+                <div>Feb 28 2020<p>Press Release</p>
+                </div>
                 <div class="card1">
                     <H2>Helping the community</H2>
-                    <h2 class="bottom-text">CSR</h2> 
+                    <h2 class="bottom-text">CSR</h2>
                 </div>
             </div>
             <div class="card">
-                <div>Aug 8 2020 <p>Article</p> </div>
+                <div>Aug 8 2020 <p>Article</p>
+                </div>
                 <div class="card2">
-                        <H5></H5>
-                        
+                    <H5></H5>
+
                 </div>
             </div>
             <div class="card">
@@ -166,6 +174,7 @@
     </div>
     <div class="copyright">Copyright @2020 Canaan Group</div>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="./assets/js/index.js"> </script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             spaceBetween: 10,
@@ -176,21 +185,6 @@
                 disableOnInteraction: false,
             }
         });
-        var menu = document.getElementById('mobile-menu');
-
-        function toggleMenu() {
-            menu.style.display = "block"
-        }
-
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-            menu.style.display = "none";
-        }
-        window.onclick = function (event) {
-            if (event.target == menu) {
-                menu.style.display = "none";
-            }
-        }
     </script>
 </body>
 

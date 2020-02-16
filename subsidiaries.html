@@ -13,16 +13,22 @@
     <title>Canaan</title>
 </head>
 
-<body>
-    <div class="subsidiaries-wrapper">
+<body onload="hideLoader()">
+    <div class="loader-holder">
+        <div id="loader">
+            <div id="loader2">
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
         <header>
-                <div class="logo"><a href="index.html"><img src="./assets/SVG/Logo.svg" width="80" alt=""></a> </div>
+            <div class="logo"><a href="index.html"><img src="./assets/SVG/Logo.svg" width="80" alt=""></a> </div>
             <div class="menu-toggler" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
             <div class="search">
                 <input type="search" placeholder="Search">
             </div>
             <div class="mymenu">
-                <a href="" class="menu-item">About</a>
+                <a href="about.html" class="menu-item">About</a>
                 <a href="subsidiaries.html">Subsidiaries</a>
                 <a href="" class="menu-item">CSR</a>
                 <a href="" class="menu-item">News & Updates</a>
@@ -32,7 +38,7 @@
             <div class="mobile-menu" id="mobile-menu">
                 <span class="close">&times;</span>
                 <div class="menu-content">
-                    <a href="">About</a><br>
+                    <a href="about.html">About</a><br>
                     <hr>
                     <a href="subsidiaries.html">Subsidiaries</a><br>
                     <hr>
@@ -46,12 +52,16 @@
                 </div>
             </div>
         </header>
+
+        <div class="subsidiaries-header">
+            <br>
+            <h1>SUBSIDIARIES</h1>
+            <p>Being a global company, we are represented in Africa. Select your area of <br>interest and take a
+                closer look.
+            </p>
+            <br>
+        </div>
         <div class="subsidiaries-container">
-            <div class="subsidiaries-header">
-                <h1>SUBSIDIARIES</h1>
-                <p>Being a global company, we are represented in Africa. Select your area of <br>interest and take a
-                    closer look. </p>
-            </div>
             <div class="subsidiaries-sub-menu">
                 <a href="">REAL ESTATE & CONSTRUCTION</a>
                 <a href="">AGRO-PROCESSING</a>
@@ -199,6 +209,8 @@
     </div>
     <div class="copyright">Copyright @2020 Canaan Group</div>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="./assets/js/index.js">
+    </script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             cssMode: true,
@@ -213,21 +225,6 @@
             mousewheel: true,
             keyboard: true,
         });
-        const menu = document.getElementById('mobile-menu');
-
-        function toggleMenu() {
-            menu.style.display = "block"
-        }
-
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-            menu.style.display = "none";
-        }
-        window.onclick = function (event) {
-            if (event.target == menu) {
-                menu.style.display = "none";
-            }
-        }
     </script>
 </body>
 

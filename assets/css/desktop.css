@@ -3,36 +3,19 @@
 Main wrapper
 */
   .wrapper {
-    display: grid;
-    background: var(--canaan-east-green);
-    grid-template-columns: 1.5em 1fr 1.5em;
-    grid-template-areas:
-      "header header header"
-      "main main main"
-      "about about about"
-      "innovation innovation innovation"
-      "workwithus workwithus workwithus"
-      "footer footer footer";
     color: var(--canaan-east-blue);
-  }
-  .subsidiaries-wrapper {
-    display: grid;
     background: var(--canaan-east-green);
-    grid-template-columns: 2fr;
-    grid-auto-rows: auto;
-    grid-template-areas:
-      "header                 header                "
-      "subsidiaries-container subsidiaries-container"
-      "footer                 footer                ";
-    color: var(--canaan-east-blue);
   }
   .menu-toggler {
     display: none;
   }
 
   .mobile-menu {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s linear;
   }
+  
   /**
   Header
   */
@@ -101,10 +84,13 @@ Main wrapper
     bottom: 0;
     left: 0;
     background-color: rgb(255, 255, 255);
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s linear;
   }
   .mymenu a:hover::after {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   /**
@@ -113,32 +99,28 @@ Main wrapper
   .swiper-container {
     grid-area: main;
   }
-  .main-content{
-    padding-right: 20px;
-    padding-left: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "welcome-text welcome-img";
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-  }
-  .main-content2 {
-    padding-right: 20px;
-    padding-left: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "welcome-text welcome-img";
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-  }
   .main-content {
+    padding-right: 20px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "welcome-text welcome-img";
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
     background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
   .main-content2 {
+    padding-right: 20px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "welcome-text welcome-img";
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
     background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img-2.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,15 +158,15 @@ Main wrapper
     display: flex;
     place-items: center;
     height: 100%;
-    width:100%;
+    width: 100%;
   }
 
   .companies img {
     width: 500px;
     left: 0;
     float: left;
-    max-width:100%;
-    max-height:auto;
+    max-width: 100%;
+    max-height: auto;
     margin: 10px auto;
     object-fit: cover;
   }
@@ -216,11 +198,11 @@ Main wrapper
     grid-template-areas:
       "carosel carosel carosel"
       "card1 card2 card3";
-      grid-auto-rows: auto;
+    grid-auto-rows: auto;
     grid-gap: 2em;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 5%;;
+    padding-bottom: 5%;
   }
   .carosel {
     grid-area: carosel;
@@ -236,7 +218,7 @@ Main wrapper
   }
   .carousel-content .description {
     margin-top: 5%;
-    padding-right: 5%;
+    padding-right: 10%;
   }
   .carousel-img {
     display: block;
@@ -246,7 +228,7 @@ Main wrapper
     float: right;
     height: 100%;
     max-height: 500px;
-    width: 90%;
+    width: 80%;
     margin-right: 5%;
     border-radius: 10px;
   }
@@ -263,19 +245,20 @@ Main wrapper
     background-size: cover;
     color: #fff;
   }
-  .card1{
+  .card1 {
     border: solid 1.5px var(--canaan-east-green);
   }
-  .card2{
-    background-size:cover ;
-      background-image: url("../images/card2.png");
+  .card2 {
+    background-size: cover;
+    background-image: url("../images/card2.png");
   }
-  .card3{
+  .card3 {
     margin-top: 78px;
     background: rgb(158, 150, 141);
   }
-  .card3 .icon{
-    float:right;text-align: right;
+  .card3 .icon {
+    float: right;
+    text-align: right;
   }
   .bottom-text {
     position: absolute;
@@ -379,13 +362,11 @@ Subsidiaries Page
 
   .subsidiaries-container {
     grid-area: subsidiaries-container;
-    padding-top: 2.5%;
     width: 100%;
     display: grid;
-    grid-template-rows: 0.1fr 1fr 1fr 1fr 1.1fr;
-    grid-auto-columns: 1fr 2fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr 2fr);
     grid-template-areas:
-      "subsidiaries-header subsidiaries-header"
       "subsidiaries-sub-menu subsidiaries-slider1"
       "..................... subsidiaries-slider2"
       "..................... subsidiaries-slider3"
@@ -393,10 +374,13 @@ Subsidiaries Page
     gap: 3em;
     padding-right: 20px;
     padding-left: 20px;
+    padding-bottom: 3%;
     background: rgb(255, 255, 255);
   }
   .subsidiaries-header {
-    grid-area: subsidiaries-header;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: #fff;
   }
   .subsidiaries-sub-menu {
     grid-area: subsidiaries-sub-menu;
@@ -411,13 +395,13 @@ Subsidiaries Page
     top: 0;
     position: sticky;
   }
-  .subsidiaries-sub-menu a{
-    color: var(--canaan-east-blue) !important; 
+  .subsidiaries-sub-menu a {
+    color: var(--canaan-east-blue) !important;
   }
   .subsidiaries-slider1 {
     grid-area: subsidiaries-slider1;
     height: 600px;
-    box-shadow: 0px 0px 10px  rgb(202, 202, 202);
+    box-shadow: 0px 0px 10px rgb(202, 202, 202);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 0.5fr 0.8fr;
@@ -434,7 +418,7 @@ Subsidiaries Page
   }
   .slide-images img {
     position: absolute;
-    height:100%;
+    height: 100%;
     object-fit: cover;
     /* width: 100px;
     height: 100px; */
@@ -444,7 +428,7 @@ Subsidiaries Page
     grid-area: desc;
     color: #fff;
     display: flex;
-    padding: 5%;
+    padding-left: 20px;
     place-items: center;
     background: var(--canaan-east-green);
   }
@@ -501,13 +485,71 @@ Subsidiaries Page
       "logos logos logos";
     border-radius: 20px;
   }
-  .swiper{
+  .swiper {
     grid-area: swiper;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }
-}
 
+  .about-container {
+    grid-area: about-container;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 0.5fr 2fr);
+    grid-template-areas:
+      "about-sub-menu         description1"
+      ".....................  description2";
+    gap: 3em;
+    padding-top: 5%;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: rgb(255, 255, 255);
+  }
+  .about-header {
+    grid-area: about-header;
+    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/about-img-20.jpg");
+    background-repeat: no-repeat;
+    display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    grid-template-columns: 1fr;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .about-header h4::before {
+    content: open-quote;
+  }
+
+  .about-header h4::after {
+    content: close-quote;
+  }
+  .about-sub-menu {
+    grid-area: about-sub-menu;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    top: 0;
+    position: sticky;
+    height: 200px;
+    gap: 0.7em;
+  }
+  .about-sub-menu a {
+    color: var(--canaan-east-blue);
+  }
+  .description1 {
+    grid-area: description1;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 1em;
+  }
+  .description2 {
+    grid-area: description2;
+  }
+}
 
 @media all and (min-width: 1200px) {
   /**
@@ -521,7 +563,8 @@ Subsidiaries Page
   /**
   Main Content
   */
-  .main-content, .main-content2{
+  .main-content,
+  .main-content2 {
     padding-right: 250px;
     padding-left: 250px;
   }
@@ -564,5 +607,21 @@ Subsidiaries pages
   .subsidiaries-container {
     padding-right: 250px;
     padding-left: 250px;
+  }
+  .subsidiaries-header {
+    padding-right: 250px;
+    padding-left: 250px;
+  }
+
+  /**
+  About container
+  */
+  .about-container {
+    padding-right: 250px;
+    padding-left: 250px;
+  }
+  .about-header {
+    padding-left: 250px;
+    padding-right: 250px;
   }
 }

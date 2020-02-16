@@ -68,17 +68,17 @@ input[type="search"] {
   border: none;
   border-radius: 25px;
   padding: 0 10px;
+  position: relative;
 }
-input[type="search"]::after{
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
-  height: 200px;
-  width: 200px;
-  background: blue
+input[type="search"]:focus, input[type="search"]:active {
+  border: none;
+  outline: none;
 }
 
+
 .fa-bars{
-  color: rgb(233, 233, 233);
   font-weight: lighter;
+  font-size: 25px !important;padding-top: .15em;
   top: 0;
   position: sticky;
 }
@@ -127,6 +127,7 @@ footer{
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9);
+
 }
 .menu-content{
   margin: 15% auto; /* 15% from the top and centered */
@@ -170,4 +171,51 @@ a[href]{
 }
 .card p{
   color: var(--canaan-east-green)
+}
+
+
+.loader-holder{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  left:0;
+  right: 0;
+  bottom:0;
+  top:0;
+  position: fixed;
+}
+#loader{
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  right:0;
+  bottom: 0;
+  top:0;
+  margin: auto;
+  border: 7x solid rgb(39, 38, 38);
+  background: #fff;
+  animation: round 6s linear infinite;
+}
+#loader2{
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  right:0;
+  bottom: 0;
+  top:0;
+  margin: auto;
+  border: 7x solid rgb(39, 38, 38);
+  background: var(--canaan-east-blue);
+  animation: round 6s linear infinite;
+}
+@keyframes round{
+  from{transform:rotate(0deg)}
+  to{transform: rotate(180deg)}
 }
