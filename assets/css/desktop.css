@@ -650,7 +650,7 @@ Subsidiaries Page
     display: grid;
     /* height: 400px; */
     gap: 1em;
-    padding-top: 6%;
+    padding-top: 11%;
     grid-template-columns: 1.35fr 1fr;
     grid-auto-rows: auto;
     grid-template-areas: "update-card4 update-card5";
