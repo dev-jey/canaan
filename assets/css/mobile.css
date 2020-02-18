@@ -51,7 +51,8 @@
   .swiper-container {
     grid-area: main;
   }
-  .main-content, .main-content2{
+  .main-content,
+  .main-content2 {
     padding: 0;
     display: grid;
     grid-template-columns: 1fr;
@@ -79,7 +80,7 @@
     font-size: 40px;
     padding-left: 5%;
     padding-right: 5%;
-    margin:auto;
+    margin: auto;
     padding-top: 60px;
     text-align: center;
     /* padding-bottom: 20px; */
@@ -102,15 +103,15 @@
     display: flex;
     place-items: center;
     height: 100%;
-    width:100%;
+    width: 100%;
   }
 
   .companies img {
     width: 450px;
     left: 0;
     float: left;
-    max-width:100%;
-    max-height:auto;
+    max-width: 100%;
+    max-height: auto;
     margin: 15px auto;
     object-fit: cover;
   }
@@ -197,19 +198,20 @@
     background-size: cover;
     color: #fff;
   }
-  .card1{
+  .card1 {
     border: solid 1.5px var(--canaan-east-green);
   }
-  .card2{
-    background-size:cover ;
-      background-image: url("../images/card2.png");
+  .card2 {
+    background-size: cover;
+    background-image: url("../images/card2.png");
   }
-  .card3{
+  .card3 {
     margin-top: 78px;
     background: rgb(158, 150, 141);
   }
-  .card3 .icon{
-    float:right;text-align: right;
+  .card3 .icon {
+    float: right;
+    text-align: right;
   }
   .bottom-text {
     position: absolute;
@@ -393,33 +395,33 @@ buttons
     border-radius: 20px;
     margin-bottom: 200px;
   }
-  .swiper{
+  .swiper {
     grid-area: swiper;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }
-  
+
   .slide-images img {
     width: inherit;
     height: inherit;
   }
   .slide-images img {
     position: absolute;
-    height:100%;
+    height: 100%;
     object-fit: cover;
     /* width: 100px;
     height: 100px; */
     /* object-fit: cover; */
   }
-  .about-container{
+  .about-container {
     padding: 5%;
     gap: 3em;
     padding-top: 5%;
     background: rgb(255, 255, 255);
   }
-  .about-header{
+  .about-header {
     grid-area: about-header;
-    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url('../images/about-img-20.jpg');
+    background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/about-img-20.jpg");
     background-repeat: no-repeat;
     display: grid;
     padding-left: 20px;
@@ -432,28 +434,206 @@ buttons
     background-size: cover;
     background-attachment: fixed;
   }
-  .about-sub-menu{
+  .about-sub-menu {
     grid-area: about-sub-menu;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     height: 320px;
-    gap: .7em;
+    gap: 0.7em;
   }
-  .about-header h4::before{
+  .about-header h4::before {
     content: open-quote;
   }
 
-  .about-header h4::after{
+  .about-header h4::after {
     content: close-quote;
   }
-  .about-sub-menu a{
+  .about-sub-menu a {
     color: var(--canaan-east-blue);
     border: solid 1px rgb(236, 236, 236);
     padding: 5px;
     border-radius: 5px;
   }
-  .description2{
+  .description2 {
     grid-area: description2;
+  }
+
+  /**
+  Updates
+  */
+  .update-header {
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .update-header h1 {
+    font-size: 50px;
+    font-weight: lighter;
+  }
+  .update-container {
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "update-area-1"
+      "update-area-2"
+      "update-area-3"
+      "update-area-4"
+      ".";
+    /* gap: 5%; */
+    grid-auto-rows: auto;
+  }
+  .update-area-1 {
+    grid-area: update-area-1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "update-container__text"
+      "update-container__img";
+  }
+  .update-container__text {
+    grid-area: update-container__text;
+    padding: 5%;
+    background: var(--canaan-east-green);
+  }
+  .update-container__text p,
+  .update-card p {
+    font-size: 39px;
+  }
+  .update-container__text span,
+  .update-card span {
+    font-size: 9px;
+    display: block;
+  }
+  .update-container__img {
+    grid-area: update-container__img;
+    background-image: url("../images/tallbuilding.png");
+    background-size: cover;
+  }
+  .update-area-2 {
+    grid-area: update-area-2;
+    display: grid;
+    gap: 1em;
+    padding-top: 10%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "update-card1"
+      "update-card2"
+      "update-card3";
+  }
+  .update-card1 {
+    grid-area: update-card1;
+    height: 400px;
+    display: flex;
+    margin-top: -30px;
+    padding: 5%;
+    place-items: center;
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgba(44, 44, 44, 0.5), rgb(0, 0, 0)),
+      url("../images/card2.png");
+    background-size: cover;
+    color: #fff;
+    border: solid 1.5px var(--canaan-east-green);
+  }
+  .update-card2 {
+    grid-area: update-card2;
+    height: 400px;
+    display: flex;
+    padding: 5%;
+    margin-top: -30px;
+    place-items: center;
+    background-image: url("../images/welcome-img.png");
+    background-size: cover;
+    color: #fff;
+  }
+  .update-card3 {
+    grid-area: update-card3;
+    height: 460px;
+    display: flex;
+    padding: 5%;
+    margin-top: -30px;
+    place-items: center;
+    background: url("../images/factory.png");
+    background-size: cover;
+    color: #fff;
+  }
+  .update-area-3 {
+    grid-area: update-area-3;
+    display: grid;
+    /* height: 400px; */
+    gap: 1em;
+    padding-top: 10%;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "update-card4"
+      "update-card5";
+  }
+  .update-card4 {
+    grid-area: update-card4;
+    height: 260px;
+    display: flex;
+    padding: 5%;
+    margin-top: -30px;
+    place-items: center;
+    background: url("../images/1x/tractor-20.jpg");
+    background-size: cover;
+    color: #fff;
+  }
+  .update-card5 {
+    grid-area: update-card5;
+    height: 200px;
+    display: flex;
+    padding: 5%;
+    margin-top: -30px;
+    place-items: center;
+    background: url("../images/1x/milk-20.jpg");
+    background-size: cover;
+    color: #fff;
+  }
+  .update-card .release {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: -20px !important;
+    text-align: right;
+  }
+  .update-area-4 {
+    grid-area: update-area-4;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "update-card6"
+      "update-card7"
+      "update-card8";
+  }
+  .update-card6 {
+    grid-area: update-card6;
+    height: 300px;
+    margin-top: -30px;
+    place-items: center;
+    background: url("../images/1x/bottle-top-20.jpg");
+    background-size: cover;
+  }
+  .update-card7 {
+    grid-area: update-card7;
+    height: 300px;
+    margin-top: -30px;
+    place-items: center;
+    background: url("../images/1x/people-helping-20.jpg");
+    background-size: cover;
+  }
+  .update-card8 {
+    grid-area: update-card8;
+    height: 300px;
+    margin-top: -30px;
+    place-items: center;
+    background: url("../images/1x/juice-20.jpg");
+    background-size: cover;
   }
 }
