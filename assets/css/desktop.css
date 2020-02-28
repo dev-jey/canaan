@@ -560,7 +560,7 @@ Subsidiaries Page
     padding-bottom: 30px;
   }
   .update-header h1{
-    font-size: 50px;
+    /* font-size: 50px; */
     font-weight: lighter;
   }
   .update-container{
@@ -716,6 +716,58 @@ Subsidiaries Page
     background: url("../images/1x/juice-20.jpg");
     background-size: cover;
   }
+
+  /**
+  Contact page
+  */
+  .contact-header{
+    background:#fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .contact-header h1{
+    /* font-size: 50px;font-family: 'Oswald',  !important; */
+    padding-top: -10px;
+    padding-bottom: -10px;
+    font-weight: bold;
+  }
+  .contact-container{
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-container-left span{
+    font-size: 12px;
+  }
+  .contact-container-right{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    top: 0;
+  }
+
+  /**
+  Careers
+  */
+  .careers-header, .careers-container{
+    background:#fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .careers-container span{
+    font-size: 12px;
+    float: right
+  }
+  .career-header{
+    background: rgb(240,240, 240);
+    padding: .75rem;
+    border: 1px solid  rgb(202, 202, 202);
+  }
 }
 
 @media all and (min-width: 1200px) {
@@ -799,6 +851,19 @@ Subsidiaries pages
     padding-right: 250px;
   }
   .update-container{
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
+  /**
+  Contact page
+  */
+  .contact-header, .contact-container{
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+  /**Careers*/
+  .careers-header, .careers-container{
     padding-left: 250px;
     padding-right: 250px;
   }

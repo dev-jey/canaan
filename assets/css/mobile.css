@@ -636,4 +636,59 @@ buttons
     background: url("../images/1x/juice-20.jpg");
     background-size: cover;
   }
+
+  /**
+  Contact page
+  */
+  .contact-header {
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .contact-header h1 {
+    /* font-size: 50px;font-family: 'Oswald',  !important; */
+    padding-top: -10px;
+    padding-bottom: -10px;
+    font-weight: bold;
+  }
+  .contact-container {
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contact-container-left span {
+    font-size: 12px;
+  }
+  .contact-container-right {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    top: 0;
+  }
+
+  /**
+  Careers
+  */
+  .careers-header,
+  .careers-container {
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .careers-container span {
+    font-size: 12px;
+    display: block;
+    padding: .75rem 0;
+    /* float: right; */
+  }
+  .career-header {
+    background: rgb(240, 240, 240);
+    padding: 0.75rem;
+    border: 1px solid rgb(202, 202, 202);
+  }
 }
