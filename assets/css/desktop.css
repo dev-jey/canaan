@@ -99,11 +99,15 @@ Main wrapper
   .swiper-container {
     grid-area: main;
   }
+  .home{
+    height: calc(100vh - 150px);
+  }
   .main-content {
     padding-right: 20px;
     padding-left: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-template-columns: .7fr 1fr;
     grid-template-areas: "welcome-text welcome-img";
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,7 +120,8 @@ Main wrapper
     padding-right: 20px;
     padding-left: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-template-columns: .7fr 1fr;
     grid-template-areas: "welcome-text welcome-img";
     background-repeat: no-repeat;
     background-size: cover;
@@ -130,15 +135,15 @@ Main wrapper
   }
   .main-content div,
   .main-content2 div {
-    font-size: 50px;
+    font-size:4rem;
     padding-left: 5%;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    place-items: center;
   }
   .welcome-img {
     grid-area: welcome-img;
-    margin-top: 10px;
-    align-self: start;
+    margin-right: auto;
+    margin-top: 1.75rem;
+    justify-self: center;
     cursor: pointer;
   }
 
@@ -153,6 +158,8 @@ Main wrapper
     text-align: left;
     padding-right: 20px;
     padding-left: 20px;
+    margin-top: 150px;
+    height: 100vh;
   }
   .companies {
     display: flex;
@@ -162,7 +169,7 @@ Main wrapper
   }
 
   .companies img {
-    width: 500px;
+    width: 550px;
     left: 0;
     float: left;
     max-width: 100%;
@@ -170,9 +177,11 @@ Main wrapper
     margin: 10px auto;
     object-fit: cover;
   }
+  .about-desc{
+    display: flex;
+    place-items: center;
+  }
   .about-content {
-    margin-top: 100px;
-    margin-bottom: 100px;
     padding-left: 15%;
     color: #fff;
   }
@@ -181,10 +190,21 @@ Main wrapper
       "Helvetica Neue", sans-serif;
     padding-top: 1%;
     padding-bottom: 2%;
+    font-size: 2.5rem;
+    font-weight: lighter;
   }
 
   .about-title {
     color: rgb(134, 134, 134);
+  }
+  .vision{
+    font-family: 'Montserrat', sans-serif;
+  }
+  .vision::before{
+    content: open-quote;
+  }
+  .vision::after{
+    content: close-quote;
   }
 
   /**
@@ -239,26 +259,34 @@ Main wrapper
     height: 400px;
     display: flex;
     padding: 5%;
-    place-items: center;
-    background: linear-gradient(rgba(100, 100, 100, 0.5), rgba(44, 44, 44, 0.5), rgb(0, 0, 0)),
-      url("../images/card2.png");
+    place-items: center;    
+    background-image: linear-gradient(rgba(100, 100, 100, 0.5), rgba(44, 44, 44, 0.5), rgb(0, 0, 0)),
+    url("../images/card2.png");
     background-size: cover;
+    border: none;
     color: #fff;
   }
-  .card1 {
+  .card1:hover, .card2:hover {
+    background-image: linear-gradient(rgba(100, 100, 100, 0.5), rgba(44, 44, 44, 0.5), rgb(0, 0, 0)),
+    url("../images/card2.png");
     border: solid 1.5px var(--canaan-east-green);
+    transition: border .5s ease, background-image .5s;
+    /* transition: background-image 3s ease-in; */
+    cursor: pointer;
   }
   .card2 {
     background-size: cover;
     background-image: url("../images/card2.png");
+    transition: border .5s ease, background-image .5s;
   }
   .card3 {
     margin-top: 78px;
     background: rgb(158, 150, 141);
+    cursor: pointer;
   }
-  .card3 .icon {
-    float: right;
-    text-align: right;
+  .card3:hover{
+    border: solid 1.5px var(--canaan-east-green);
+    transition: border .5s ease;
   }
   .bottom-text {
     position: absolute;
@@ -764,9 +792,28 @@ Subsidiaries Page
     float: right
   }
   .career-header{
-    background: rgb(240,240, 240);
+    background: rgb(235,235, 235);
     padding: .75rem;
     border: 1px solid  rgb(202, 202, 202);
+  }
+  .career-body{
+    background: rgb(242, 242, 242);
+    padding: 1.75rem .5rem;
+    margin-bottom: 1.75rem;
+  }
+  .card-body-heading{
+    margin: 0 1rem;
+    font-size: 1.2rem;
+  }
+  .career-body ul {
+    margin: 0;
+    margin-left: -1.75rem;
+  }
+  .career-body ul li {
+    list-style-type: none;
+  }
+  .career-body  ul > li:before {
+    content: "- ";
   }
 }
 
