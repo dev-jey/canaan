@@ -156,8 +156,16 @@ footer{
   color: rgb(23, 26, 56);
   font-size: 30px;
   padding-right: 5%;
-  /* border: solid 1px rgb(23, 26, 56);
-  border-radius: 50%; */
+  display: flex;
+}
+.social div{
+  border: solid 1.5px rgb(23, 26, 56);
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center;
+  margin-right: .5rem;
+  cursor: pointer;
 }
 .swiper-container {
   width:100%;
@@ -285,4 +293,27 @@ a[href]{
 @keyframes loading-spinner {
   0%   { transform: rotate(0deg);   transform: rotate(0deg); }
   100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
