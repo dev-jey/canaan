@@ -113,6 +113,7 @@ Main wrapper
     background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
   .main-content2 {
     padding-right: 20px;
@@ -126,6 +127,7 @@ Main wrapper
     color: #fff;
     background-image: linear-gradient(rgba(15, 28, 71, 0.8), rgba(21, 27, 82, 0.8)), url("../images/welcome-img-2.png");
     background-repeat: no-repeat;
+    /* background-attachment: fixed; */
     background-size: cover;
   }
   .welcome-text {
@@ -361,9 +363,13 @@ Main wrapper
   }
   .getintouch {
     grid-area: getintouch;
+    margin-top: 0 !important;
   }
   .contact {
     grid-area: contact;
+  }
+  .contact div{
+    margin-top:3.5rem;
   }
   .location {
     grid-area: location;
@@ -408,6 +414,10 @@ Subsidiaries Page
     padding-right: 20px;
     padding-left: 20px;
     background: #fff;
+  }
+  .subsidiaries-header h1{
+    font-size: 2.5rem;
+    font-weight: lighter;
   }
   .subsidiaries-sub-menu {
     grid-area: subsidiaries-sub-menu;
@@ -539,12 +549,19 @@ Subsidiaries Page
     display: grid;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    grid-template-columns: 1fr;
+    height: calc(100vh - 130px);
     color: #fff;
     background-size: cover;
     background-attachment: fixed;
+  }
+  .about-header div{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+  }
+  .about-header h1{
+    font-size: 3rem;
   }
   .about-header h4::before {
     content: open-quote;
@@ -587,7 +604,7 @@ Subsidiaries Page
     padding-bottom: 30px;
   }
   .update-header h1{
-    /* font-size: 50px; */
+    font-size: 2.5rem;
     font-weight: lighter;
   }
   .update-container{
@@ -794,6 +811,10 @@ Subsidiaries Page
     background: rgb(235,235, 235);
     padding: .75rem;
     border: 1px solid  rgb(202, 202, 202);
+  }
+  .careers-header h1{
+    font-weight: lighter;
+    font-size: 2.5rem;
   }
   .career-body{
     background: rgb(242, 242, 242);

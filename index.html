@@ -8,22 +8,23 @@
     <link rel="stylesheet" href="assets/css/mobile.css">
     <link rel="stylesheet" href="assets/css/desktop.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <title>Canaan</title>
 </head>
 
-<body>
+<body class="animated fadeIn">
     <div class="wrapper">
         <div class="home">
 
         <header>
-            <div class="logo"><a href="index.html"><img src="./assets/SVG/Logo.svg" width="80" alt=""></a> </div>
+            <div class="logo animated fadeIn"><a href="index.html"><img src="./assets/SVG/Logo.svg" width="80" alt=""></a> </div>
             <div class="menu-toggler" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
-            <div class="search">
+            <div class="search animated fadeIn">
                 <input type="search" placeholder="Search">
             </div>
-            <div class="mymenu">
+            <div class="mymenu animated fadeIn">
                 <a href="about.html">About</a>
                 <a href="subsidiaries.html">Subsidiaries</a>
                 <a href="">CSR</a>
@@ -52,25 +53,25 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide main-content">
-                    <div class="welcome-text">BREAKING <br> BOUNDARIES</div>
+                    <div class="welcome-text animated fadeInLeft delay-1s">BREAKING <br> BOUNDARIES</div>
                     <div class="welcome-img">
                         <img src="./assets/SVG/Playvideo.svg" alt="" width="120">
                     </div>
                 </div>
-                <div class="swiper-slide main-content2">
-                    <div class="welcome-text">BREAKING <br>BOUNDARIES</div>
+                <!-- <div class="swiper-slide main-content2">
+                    <div class="welcome-text animated fadeInLeft delay-1s">BREAKING <br>BOUNDARIES</div>
                     <div class="welcome-img">
                         <img src="./assets/SVG/Playvideo.svg" alt="" width="120">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         </div>
         <div class="about">
-            <div class="companies">
+            <div class="companies animated fadeInUp delay-1s">
                 <img src="./assets/SVG/SVG/canaan-companies.svg" alt="">
             </div>
-            <div class="about-desc">
+            <div class="about-desc  animated fadeInUp delay-1s">
             <div class="about-content">
                 <h5 class="about-title line">About</h5>
                 <h1>CONTRIBUTING TO THE DEVELOPMENT OF AFRICA.</h1>
@@ -84,12 +85,12 @@
         </div>
         <div class="innovation">
             <div class="carosel">
-                <div class="carousel-content">
+                <div class="carousel-content animated fadeIn">
                     <div class="carousel-img">
                         <img src="./assets/images/machines.png" alt="">
                     </div>
                     <div class="description">
-                        <div class="line">Brands</div>
+                        <div class="line">Brands</div><br>
                         <h2>DRIVEN BY INNOVATION</h2>
                         <p>In a fast paced world, embracing innovation is a true game changer. At Canaan plastics
                             limited, we have invested in state of the art systems
@@ -106,23 +107,23 @@
                 <br>
                 <p class="stories line">Stories</p>
             </div>
-            <div class="card">
-                <div>Feb 28 2020<p>Press Release</p>
+            <div class="card animated fadeInUp">
+                <div>Feb 28 2020<p>PRESS RELEASE</p>
                 </div>
                 <div class="card1">
                     <H2>Helping the community</H2>
                     <h2 class="bottom-text">CSR</h2>
                 </div>
             </div>
-            <div class="card">
-                <div>Aug 8 2020 <p>Article</p>
+            <div class="card animated fadeInUp">
+                <div>Aug 8 2020 <p>ARTICLE</p>
                 </div>
                 <div class="card2">
                     <H5></H5>
 
                 </div>
             </div>
-            <div class="card">
+            <div class="card animated fadeInUp">
                 <div> </div>
                 <div class="card3">
                     <h2>Read more Updates on our products</h2><br>
@@ -139,14 +140,17 @@
             </div>
         </div>
         <footer>
-            <h5 class="getintouch line">Get In Touch</h5>
+            <span class="getintouch line">Get In Touch</span>
             <div class="contact">
-                <h2>Contact</h2>
+                <br>
+                <h1>CONTACT</h1>
+                <div>
                 <p>Select the country you wish to contact</p>
                 <select>
                     <option value="" disabled selected="selected">Select Country</option>
                     <option value="">Kenya</option>
                 </select>
+                </div>
             </div>
             <div class="location"><br>
                 One PadMore Place, <br>
