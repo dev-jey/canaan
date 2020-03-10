@@ -18,7 +18,7 @@
 
     <div class="wrapper">
         <header>
-            <div class="logo"><a href="index.html"><img src="./assets/SVG/Logo.svg" width="80" alt=""></a> </div>
+            <div class="logo"><a href="index.html"><img src="./assets/SVG/Logo.svg" alt=""></a> </div>
             <div class="menu-toggler" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></div>
             <div class="search">
                 <input type="search" placeholder="Search">
@@ -60,25 +60,25 @@
             <hr>
         </div>
         <div class="contact-container">
-            <div class="contact-container-left">
+            <form class="contact-container-left">
                 <div>
                     <span>Your name*</span><br>
-                    <input type="text" placeholder="Enter your name">
+                    <input type="text" placeholder="Enter your name" required>
                 </div>
                 <div>
                     <span>Email Address*</span><br>
-                    <input type="text" placeholder="Enter your email address">
+                    <input type="email" placeholder="Enter your email address" required>
                 </div>
                 <div>
                     <span>Phone number*</span><br>
-                    <input type="text" placeholder="Enter your  phone number">
+                    <input type="text" placeholder="Enter your  phone number" required>
                 </div>
                 <div>
                     <span>Message</span><br>
                     <textarea placeholder="Enter your message or comments"></textarea>
                 </div><br>
-                <button class="btn btn-success"> Send Message</button>
-            </div>
+                <button class="btn btn-success" type="submit"> Send Message</button>
+            </form>
             <div class="contact-container-right">
                 Canaan East Company Limited,<br>One Padmore, 8th floor<br>George Padmore Road.<br>28372 - 00100,
                 Nairobi, Kenya.<br><br>
@@ -123,7 +123,7 @@
             </div>
         </footer>
     </div>
-    <div class="copyright">Copyright @2020 Canaan Group</div>
+    <div class="copyright">Copyright &copy; 2020 Canaan Group</div>
     <script src="./assets/js/index.js">
     </script>
 </body>

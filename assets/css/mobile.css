@@ -34,6 +34,7 @@
   }
   .logo img {
     padding-bottom: 25px;
+    width: 150px;
   }
   .search {
     grid-area: search;
@@ -439,8 +440,9 @@ buttons
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    height: 320px;
+    height: 100%;
     gap: 0.7em;
+    margin-bottom: .85rem;
   }
   .about-header h4::before {
     content: open-quote;
@@ -454,6 +456,11 @@ buttons
     border: solid 1px rgb(236, 236, 236);
     padding: 5px;
     border-radius: 5px;
+  }
+  .external-images img{
+    object-fit: contain;
+    width: 60%;
+    height: 100%
   }
   .description2 {
     grid-area: description2;
