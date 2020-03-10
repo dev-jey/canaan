@@ -103,8 +103,7 @@ Main wrapper
   Main Content
   */
   .home{
-    height: calc(100vh - 130px);
-
+    height: 480px;
   }
   .main-content {
     padding-right: 20px;
@@ -164,8 +163,10 @@ Main wrapper
     text-align: left;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 128px;
-    height: calc(100vh - 160px);
+    /* margin-top: 128px; */
+    padding-top: 12rem;
+    padding-bottom: 3.5rem;
+    
   }
   .companies {
     display: flex;
@@ -487,6 +488,7 @@ Subsidiaries Page
   .logos img,
   .logos a {
     padding-left: 15%;
+    color: var(--canaan-east-blue);
   }
 
   .subsidiaries-slider2 {
@@ -555,7 +557,8 @@ Subsidiaries Page
     display: grid;
     padding-left: 20px;
     padding-right: 20px;
-    height: calc(100vh - 130px);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     color: #fff;
     background-size: cover;
     background-attachment: fixed;
